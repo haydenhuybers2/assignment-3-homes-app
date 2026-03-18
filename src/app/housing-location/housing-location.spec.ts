@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 
 import { HousingLocation } from './housing-location';
+import { routes } from '../app.routes';
 import { HousingLocationInfo } from '../housinglocationinfo';
 
 const testHousingLocation: HousingLocationInfo = {
@@ -20,7 +22,8 @@ describe('HousingLocation', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HousingLocation]
+      imports: [HousingLocation],
+      providers: [provideRouter(routes)],
     })
     .compileComponents();
 

@@ -1,11 +1,13 @@
 <main>
 <header class="brand-name">
+<a [routerLink]="['/']">
 <img class="brand-logo"
 src="house-logo.png"
 alt="logo"
 aria-hidden="true" />
+</a>
 </header>
 <section class="content">
-<app-home />
+<router-outlet></router-outlet>
 </section>
 </main>
